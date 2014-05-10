@@ -13,6 +13,9 @@
 		15A26071191B801700CE93F6 /* MongoDB_prefsPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A26070191B801700CE93F6 /* MongoDB_prefsPane.m */; };
 		15A26073191B801700CE93F6 /* MongoDB_prefsPane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A26072191B801700CE93F6 /* MongoDB_prefsPane.tiff */; };
 		15A26076191B801700CE93F6 /* MongoDB_prefsPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A26074191B801700CE93F6 /* MongoDB_prefsPane.xib */; };
+		15A26081191B84E500CE93F6 /* instance_started.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A2607D191B84E500CE93F6 /* instance_started.tiff */; };
+		15A26082191B84E500CE93F6 /* instance_stopped.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A2607E191B84E500CE93F6 /* instance_stopped.tiff */; };
+		15A26083191B84E500CE93F6 /* logo-mongodb.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A2607F191B84E500CE93F6 /* logo-mongodb.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		15A26070191B801700CE93F6 /* MongoDB_prefsPane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoDB_prefsPane.m; sourceTree = "<group>"; };
 		15A26072191B801700CE93F6 /* MongoDB_prefsPane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MongoDB_prefsPane.tiff; sourceTree = "<group>"; };
 		15A26075191B801700CE93F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MongoDB_prefsPane.xib; sourceTree = "<group>"; };
+		15A2607D191B84E500CE93F6 /* instance_started.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = instance_started.tiff; sourceTree = "<group>"; };
+		15A2607E191B84E500CE93F6 /* instance_stopped.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = instance_stopped.tiff; sourceTree = "<group>"; };
+		15A2607F191B84E500CE93F6 /* logo-mongodb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "logo-mongodb.tiff"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,11 +102,22 @@
 		15A26069191B801700CE93F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				15A2607C191B84E500CE93F6 /* resources */,
 				15A2606A191B801700CE93F6 /* MongoDB.prefsPane-Info.plist */,
 				15A2606B191B801700CE93F6 /* InfoPlist.strings */,
 				15A2606E191B801700CE93F6 /* MongoDB.prefsPane-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15A2607C191B84E500CE93F6 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				15A2607D191B84E500CE93F6 /* instance_started.tiff */,
+				15A2607E191B84E500CE93F6 /* instance_stopped.tiff */,
+				15A2607F191B84E500CE93F6 /* logo-mongodb.tiff */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,7 +186,10 @@
 			files = (
 				15A26073191B801700CE93F6 /* MongoDB_prefsPane.tiff in Resources */,
 				15A2606D191B801700CE93F6 /* InfoPlist.strings in Resources */,
+				15A26082191B84E500CE93F6 /* instance_stopped.tiff in Resources */,
 				15A26076191B801700CE93F6 /* MongoDB_prefsPane.xib in Resources */,
+				15A26083191B84E500CE93F6 /* logo-mongodb.tiff in Resources */,
+				15A26081191B84E500CE93F6 /* instance_started.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
