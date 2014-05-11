@@ -142,11 +142,17 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="port" id="k3E-X6-SqR"/>
+                                            </connections>
                                         </textField>
                                         <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTT-8R-aAI">
                                             <rect key="frame" x="221" y="146" width="15" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <stepperCell key="cell" controlSize="small" continuous="YES" alignment="left" increment="10" minValue="1024" maxValue="65535" doubleValue="27001" id="OJp-Eb-odg"/>
+                                            <connections>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="port" id="FUl-eh-xqF"/>
+                                            </connections>
                                         </stepper>
                                     </subviews>
                                 </view>
@@ -162,6 +168,8 @@
                 </subviews>
             </view>
         </window>
+        <customObject id="lZN-Dz-Cco" customClass="MongodController"/>
+        <userDefaultsController representsSharedInstance="YES" id="RCm-67-I1I"/>
     </objects>
     <resources>
         <image name="instance_started" width="48" height="50"/>
