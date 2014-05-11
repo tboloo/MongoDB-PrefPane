@@ -143,6 +143,11 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
+                                                <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="ct0-bT-xif">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">IsRunningValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
                                                 <binding destination="lZN-Dz-Cco" name="value" keyPath="port" id="k3E-X6-SqR"/>
                                             </connections>
                                         </textField>
@@ -151,6 +156,11 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <stepperCell key="cell" controlSize="small" continuous="YES" alignment="left" increment="10" minValue="1024" maxValue="65535" doubleValue="27001" id="OJp-Eb-odg"/>
                                             <connections>
+                                                <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="moN-cE-31E">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">IsRunningValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
                                                 <binding destination="lZN-Dz-Cco" name="value" keyPath="port" id="FUl-eh-xqF"/>
                                             </connections>
                                         </stepper>

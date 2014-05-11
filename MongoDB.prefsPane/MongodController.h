@@ -12,9 +12,9 @@
     
 }
 
-@property (nonatomic) BOOL isRunning;
-@property (nonatomic, ) NSString *mongodPath;
-@property NSString *dbPath;
-@property NSNumber *port;
+@property (nonatomic, copy) NSNumber *isRunning;
+@property (nonatomic, copy) NSString *mongodPath;
+@property (nonatomic, copy) NSString *dbPath;
+@property (nonatomic, copy) NSNumber *port;
 
 @end

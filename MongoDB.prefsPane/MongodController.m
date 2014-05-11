@@ -16,6 +16,7 @@
     self = [super init];
     if (self) {
         self.port = [NSNumber numberWithInt:27017];
+        self.isRunning = [NSNumber numberWithBool:NO];
     }
     return self;
 }

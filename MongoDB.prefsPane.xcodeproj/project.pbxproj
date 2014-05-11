@@ -18,6 +18,10 @@
 		15A26083191B84E500CE93F6 /* logo-mongodb.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A2607F191B84E500CE93F6 /* logo-mongodb.tiff */; };
 		15A26087191EBEE100CE93F6 /* MongodController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A26085191EBEE100CE93F6 /* MongodController.h */; };
 		15A26088191EBEE100CE93F6 /* MongodController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A26086191EBEE100CE93F6 /* MongodController.m */; };
+		15A2608C191F3DCB00CE93F6 /* IsRunningValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2608A191F3DCB00CE93F6 /* IsRunningValueTransformer.h */; };
+		15A2608D191F3DCB00CE93F6 /* IsRunningValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */; };
+		15A26090191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */; };
+		15A26091191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		15A2607F191B84E500CE93F6 /* logo-mongodb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "logo-mongodb.tiff"; sourceTree = "<group>"; };
 		15A26085191EBEE100CE93F6 /* MongodController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MongodController.h; sourceTree = "<group>"; };
 		15A26086191EBEE100CE93F6 /* MongodController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MongodController.m; sourceTree = "<group>"; };
+		15A2608A191F3DCB00CE93F6 /* IsRunningValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningValueTransformer.h; sourceTree = "<group>"; };
+		15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningValueTransformer.m; sourceTree = "<group>"; };
+		15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToImageValueTransformer.h; sourceTree = "<group>"; };
+		15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToImageValueTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +102,8 @@
 		15A26068191B801700CE93F6 /* MongoDB.prefsPane */ = {
 			isa = PBXGroup;
 			children = (
+				15A26089191F3DA600CE93F6 /* Mongo */,
 				15A2606F191B801700CE93F6 /* MongoDB_prefsPane.h */,
-				15A26085191EBEE100CE93F6 /* MongodController.h */,
-				15A26086191EBEE100CE93F6 /* MongodController.m */,
 				15A26070191B801700CE93F6 /* MongoDB_prefsPane.m */,
 				15A26072191B801700CE93F6 /* MongoDB_prefsPane.tiff */,
 				15A26074191B801700CE93F6 /* MongoDB_prefsPane.xib */,
@@ -126,6 +133,19 @@
 			path = resources;
 			sourceTree = "<group>";
 		};
+		15A26089191F3DA600CE93F6 /* Mongo */ = {
+			isa = PBXGroup;
+			children = (
+				15A26085191EBEE100CE93F6 /* MongodController.h */,
+				15A26086191EBEE100CE93F6 /* MongodController.m */,
+				15A2608A191F3DCB00CE93F6 /* IsRunningValueTransformer.h */,
+				15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */,
+				15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */,
+				15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */,
+			);
+			name = Mongo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -133,7 +153,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A2608C191F3DCB00CE93F6 /* IsRunningValueTransformer.h in Headers */,
 				15A26087191EBEE100CE93F6 /* MongodController.h in Headers */,
+				15A26090191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A26091191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m in Sources */,
 				15A26071191B801700CE93F6 /* MongoDB_prefsPane.m in Sources */,
+				15A2608D191F3DCB00CE93F6 /* IsRunningValueTransformer.m in Sources */,
 				15A26088191EBEE100CE93F6 /* MongodController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +383,7 @@
 				15A2607B191B801700CE93F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
