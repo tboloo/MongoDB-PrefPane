@@ -16,8 +16,8 @@
 	BOOL isWorking = [value boolValue];
     
 	if(isWorking){
-		return [NSImage imageNamed:@"instance_started.tiff"];
-	}else{
+        return [NSImage imageNamed:@"instance_started.tiff"];
+    } else {
 		return [NSImage imageNamed:@"instance_stopped.tiff"];
 	}
 	

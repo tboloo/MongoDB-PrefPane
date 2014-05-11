@@ -22,6 +22,12 @@
 		15A2608D191F3DCB00CE93F6 /* IsRunningValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */; };
 		15A26090191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */; };
 		15A26091191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */; };
+		15A26094191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A26092191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h */; };
+		15A26095191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A26093191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m */; };
+		15A26098191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A26096191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h */; };
+		15A26099191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A26097191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m */; };
+		15A2609C191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2609A191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h */; };
+		15A2609D191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A2609B191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,12 @@
 		15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningValueTransformer.m; sourceTree = "<group>"; };
 		15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToImageValueTransformer.h; sourceTree = "<group>"; };
 		15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToImageValueTransformer.m; sourceTree = "<group>"; };
+		15A26092191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToFontColorValueTransformer.h; sourceTree = "<group>"; };
+		15A26093191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToFontColorValueTransformer.m; sourceTree = "<group>"; };
+		15A26096191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToStringValueTransformer.h; sourceTree = "<group>"; };
+		15A26097191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToStringValueTransformer.m; sourceTree = "<group>"; };
+		15A2609A191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToButtonCaptionValueTransformer.h; sourceTree = "<group>"; };
+		15A2609B191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToButtonCaptionValueTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +154,12 @@
 				15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */,
 				15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */,
 				15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */,
+				15A26092191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h */,
+				15A26093191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m */,
+				15A26096191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h */,
+				15A26097191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m */,
+				15A2609A191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h */,
+				15A2609B191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m */,
 			);
 			name = Mongo;
 			sourceTree = "<group>";
@@ -153,8 +171,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A2609C191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h in Headers */,
+				15A26098191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h in Headers */,
 				15A2608C191F3DCB00CE93F6 /* IsRunningValueTransformer.h in Headers */,
 				15A26087191EBEE100CE93F6 /* MongodController.h in Headers */,
+				15A26094191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h in Headers */,
 				15A26090191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,10 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A2609D191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m in Sources */,
 				15A26091191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m in Sources */,
 				15A26071191B801700CE93F6 /* MongoDB_prefsPane.m in Sources */,
+				15A26095191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m in Sources */,
 				15A2608D191F3DCB00CE93F6 /* IsRunningValueTransformer.m in Sources */,
 				15A26088191EBEE100CE93F6 /* MongodController.m in Sources */,
+				15A26099191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
