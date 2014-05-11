@@ -11,17 +11,8 @@
 
 @implementation MongoDB_prefsPane
 
-- (void)mainViewDidLoad
-{
+- (void)mainViewDidLoad {
+    mongodController = [MongodController new];
 }
-
-//-(id)init {
-//    self = [super init];
-//    if (self) {
-//        NSValueTransformer *transformer = [[IsRunningValueTransformer alloc] init];
-//        [NSValueTransformer setValueTransformer:transformer forName:@"IsRunningValueTransformer"];
-//    }
-//    return self;
-//}
 
 @end

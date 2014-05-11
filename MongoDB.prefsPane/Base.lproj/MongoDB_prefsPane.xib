@@ -87,6 +87,7 @@
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
+                                                <action selector="startStopMongod:" target="lZN-Dz-Cco" id="KLI-in-Z7z"/>
                                                 <binding destination="lZN-Dz-Cco" name="title" keyPath="isRunning" id="U8W-zC-NKr">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">IsRunningToButtonCaptionValueTransformer</string>
@@ -110,20 +111,40 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQw-SV-7qH">
-                                            <rect key="frame" x="129" y="197" width="178" height="20"/>
+                                            <rect key="frame" x="130" y="198" width="250" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" pathStyle="navigationBar" id="nFT-kB-Ewu">
+                                            <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" id="nFT-kB-Ewu">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <url key="url" string="file://localhost/Applications/"/>
+                                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                             </pathCell>
+                                            <connections>
+                                                <action selector="showPathOpenPanel:" target="lZN-Dz-Cco" id="AQy-cC-g34"/>
+                                                <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="J9c-75-2YA">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">IsRunningValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="mongodPath" id="ZMu-tJ-d2S"/>
+                                            </connections>
                                         </pathControl>
                                         <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNl-Z1-AB1">
-                                            <rect key="frame" x="129" y="171" width="178" height="20"/>
+                                            <rect key="frame" x="130" y="172" width="250" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" pathStyle="navigationBar" id="DFy-6c-Fia">
+                                            <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" id="DFy-6c-Fia">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <url key="url" string="file://localhost/Applications/"/>
+                                                <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                             </pathCell>
+                                            <connections>
+                                                <action selector="showDbPathPanel:" target="lZN-Dz-Cco" id="tZI-eR-G7l"/>
+                                                <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="BTw-DP-GdI">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">IsRunningValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="dbPath" id="aUB-jC-Lx6"/>
+                                            </connections>
                                         </pathControl>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqc-5o-hzy">
                                             <rect key="frame" x="48" y="200" width="85" height="14"/>
@@ -197,6 +218,47 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="3Bc-F7-vzD">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="o1L-8K-NfH">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">IsRunningValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="useSyslog" id="V0r-yh-4e9"/>
+                                            </connections>
+                                        </button>
+                                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnG-A4-IWt">
+                                            <rect key="frame" x="127" y="100" width="62" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" controlSize="small" state="on" inset="2" id="IeG-SJ-DT2">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="smallSystem"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="0b9-sd-Qyb">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">IsRunningValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="enableHTTPInterface" id="FNG-WR-0Zk"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izi-Ci-sBd">
+                                            <rect key="frame" x="41" y="103" width="85" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HTTP interface:" id="s8o-co-PHQ">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wqi-qx-kcD">
+                                            <rect key="frame" x="125" y="71" width="114" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Advanced ..." bezelStyle="rounded" alignment="center" controlSize="small" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oEP-Pe-7za">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                 <font key="font" metaFont="smallSystem"/>
                                             </buttonCell>
                                         </button>

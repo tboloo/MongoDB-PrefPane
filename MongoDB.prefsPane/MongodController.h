@@ -13,8 +13,11 @@
 }
 
 @property (nonatomic, copy) NSNumber *isRunning;
-@property (nonatomic, copy) NSString *mongodPath;
-@property (nonatomic, copy) NSString *dbPath;
+@property (nonatomic, copy) NSNumber *useSyslog;
+@property (nonatomic, copy) NSNumber *enableHTTPInterface;
 @property (nonatomic, copy) NSNumber *port;
+@property (nonatomic, copy) NSURL *mongodPath;
+@property (nonatomic, copy) NSURL *dbPath;
+@property (nonatomic, copy) NSTask *mongodTask;
 
 @end

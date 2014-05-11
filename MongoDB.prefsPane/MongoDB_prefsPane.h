@@ -7,8 +7,11 @@
 //
 
 #import <PreferencePanes/PreferencePanes.h>
+#import "MongodController.h"
 
-@interface MongoDB_prefsPane : NSPreferencePane
+@interface MongoDB_prefsPane : NSPreferencePane {
+    MongodController *mongodController;
+}
 
 - (void)mainViewDidLoad;
 
