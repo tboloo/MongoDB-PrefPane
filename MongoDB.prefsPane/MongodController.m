@@ -10,11 +10,13 @@
 
 
 @implementation MongodController
-@synthesize isRunning, useSyslog, enableHTTPInterface, mongodPath = _mongodPath, dbPath = _dbPath, port = _port, mongodTask;
+@synthesize isRunning, useSyslog = _useSyslog, enableHTTPInterface = _enableHTTPInterface, mongodPath = _mongodPath, dbPath = _dbPath, port = _port, mongodTask;
 
 -(id)init {
     self = [super init];
     if (self) {
+        self.isRunning = [NSNumber numberWithBool:NO];
+
         NSNumber *p = [[NSUserDefaults standardUserDefaults] valueForKey:@"port"];
         if (p != nil) {
             self.port = p;
@@ -37,9 +39,19 @@
 
         }
         
-        self.isRunning = [NSNumber numberWithBool:NO];
-        self.useSyslog = [NSNumber numberWithBool:NO];
-        self.enableHTTPInterface = [NSNumber numberWithBool:YES];
+        NSNumber *s = [[NSUserDefaults standardUserDefaults] valueForKey:@"useSyslog"];
+        if (s != nil) {
+            self.useSyslog = s;
+        } else {
+            self.useSyslog = [NSNumber numberWithBool:YES];
+        }
+
+        NSNumber *h = [[NSUserDefaults standardUserDefaults] valueForKey:@"enableHTTPInteface"];
+        if (h != nil) {
+            self.enableHTTPInterface = h;
+        } else {
+            self.enableHTTPInterface = [NSNumber numberWithBool:YES];
+        }
         //self.mongodTask = [[NSTask alloc] init];
     }
     return self;
@@ -58,6 +70,16 @@
 -(void)setDbPath:(NSURL *)dbPath {
     _dbPath = dbPath;
     [[NSUserDefaults standardUserDefaults] setObject:[_dbPath path] forKey:@"dbPath"];
+}
+
+-(void)setUseSyslog:(NSNumber *)useSyslog {
+    _useSyslog = useSyslog;
+    [[NSUserDefaults standardUserDefaults] setObject:_useSyslog forKey:@"useSyslog"];
+}
+
+-(void)setEnableHTTPInterface:(NSNumber *)enableHTTPInterface {
+    _enableHTTPInterface = enableHTTPInterface;
+    [[NSUserDefaults standardUserDefaults] setObject:_enableHTTPInterface forKey:@"enableHTTPInteface"];
 }
 
 - (IBAction)showPathOpenPanel:(id)sender {
