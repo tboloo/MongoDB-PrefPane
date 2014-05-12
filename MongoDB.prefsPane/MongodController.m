@@ -7,7 +7,6 @@
 //
 
 #import "MongodController.h"
-#import "ProcessController.h"
 
 @implementation MongodController
 @synthesize isRunning, useSyslog = _useSyslog, enableHTTPInterface = _enableHTTPInterface, mongodPath = _mongodPath, dbPath = _dbPath, port = _port, mongodTask;
@@ -15,13 +14,13 @@
 -(id)init {
     self = [super init];
     if (self) {
-        self.isRunning = [NSNumber numberWithBool:NO];
+        self.isRunning = @(NO);
 
         NSNumber *p = [[NSUserDefaults standardUserDefaults] valueForKey:@"port"];
         if (p != nil) {
             self.port = p;
         } else {
-            self.port = [NSNumber numberWithInt:27017];
+            self.port = @(27017);
         }
         
         NSString *m = [[NSUserDefaults standardUserDefaults] valueForKey:@"mongodPath"];
@@ -43,18 +42,16 @@
         if (s != nil) {
             self.useSyslog = s;
         } else {
-            self.useSyslog = [NSNumber numberWithBool:NO];
+            self.useSyslog = @(NO);
         }
 
         NSNumber *h = [[NSUserDefaults standardUserDefaults] valueForKey:@"enableHTTPInteface"];
         if (h != nil) {
             self.enableHTTPInterface = h;
         } else {
-            self.enableHTTPInterface = [NSNumber numberWithBool:YES];
+            self.enableHTTPInterface = @(YES);
         }
         pid = [[NSUserDefaults standardUserDefaults] valueForKey:@"pid"];
-        self.isRunning = [ProcessController checkProcessWithPid:pid];
-        NSLog(@"%@ isRunning: %@", pid, self.isRunning);
     }
     return self;
 }
@@ -143,22 +140,20 @@
         [arguments addObject:[self.dbPath path]];
         [arguments addObject:@"--port"];
         [arguments addObject:[self.port stringValue]];
-        if ([self.enableHTTPInterface boolValue] == YES) {
-            [arguments addObject:@"--httpinterface"];
-        }
+//        if ([self.enableHTTPInterface boolValue] == YES) {
+//            [arguments addObject:@"--httpinterface"];
+//        }
         if ([self.useSyslog boolValue] == YES) {
             [arguments addObject:@"--syslog"];
         }
         self.mongodTask.arguments = arguments;
         [self.mongodTask launch];
-        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:self.mongodTask.processIdentifier] forKey:@"pid"];
-        self.isRunning = [NSNumber numberWithBool:YES];
-//        self.isRunning = [ProcessController checkProcessWithPid:[NSNumber numberWithInt:self.mongodTask.processIdentifier]];
-        NSLog(@"pid: %d, %d", self.mongodTask.processIdentifier, self.mongodTask.isRunning);
+        [[NSUserDefaults standardUserDefaults] setObject:@(self.mongodTask.processIdentifier) forKey:@"pid"];
+        self.isRunning = @(self.mongodTask.isRunning);
     } else {
-        [ProcessController killProcessWithPid:pid];
+        [self.mongodTask terminate];
         self.mongodTask = nil;
-        self.isRunning = [ProcessController checkProcessWithPid:pid];
+        self.isRunning = @(NO);
     }
 }
 
