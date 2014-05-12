@@ -12,7 +12,6 @@
 @implementation MongoDB_prefsPane
 
 - (void)mainViewDidLoad {
-    mongodController = [MongodController new];
 }
 
 @end

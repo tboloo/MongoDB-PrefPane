@@ -26,7 +26,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="MongoDB" identifier="1" id="gqE-hS-p8A">
-                                <view key="view" id="bz2-YS-oNi">
+                                <view key="view" ambiguous="YES" id="bz2-YS-oNi">
                                     <rect key="frame" x="10" y="33" width="622" height="219"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -34,6 +34,13 @@
                                             <rect key="frame" x="20" y="153" width="42" height="42"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="instance_stopped" id="TU6-XF-cjt"/>
+                                            <connections>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="isRunning" id="EV6-fO-2kk">
+                                                    <dictionary key="options">
+                                                        <string key="NSValueTransformerName">IsRunningToImageValueTransformer</string>
+                                                    </dictionary>
+                                                </binding>
+                                            </connections>
                                         </imageView>
                                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LIt-Z4-AJX">
                                             <rect key="frame" x="476" y="17" width="129" height="42"/>
@@ -106,7 +113,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Settings" identifier="2" id="0jx-ku-a2R">
-                                <view key="view" ambiguous="YES" id="2Mo-f9-Hkn">
+                                <view key="view" id="2Mo-f9-Hkn">
                                     <rect key="frame" x="10" y="33" width="622" height="219"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -138,12 +145,12 @@
                                             </pathCell>
                                             <connections>
                                                 <action selector="showDbPathPanel:" target="lZN-Dz-Cco" id="tZI-eR-G7l"/>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="dbPath" id="aUB-jC-Lx6"/>
                                                 <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="BTw-DP-GdI">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">IsRunningValueTransformer</string>
                                                     </dictionary>
                                                 </binding>
-                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="dbPath" id="aUB-jC-Lx6"/>
                                             </connections>
                                         </pathControl>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqc-5o-hzy">
@@ -237,12 +244,12 @@
                                                 <font key="font" metaFont="smallSystem"/>
                                             </buttonCell>
                                             <connections>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="enableHTTPInterface" id="FNG-WR-0Zk"/>
                                                 <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="0b9-sd-Qyb">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">IsRunningValueTransformer</string>
                                                     </dictionary>
                                                 </binding>
-                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="enableHTTPInterface" id="FNG-WR-0Zk"/>
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="izi-Ci-sBd">

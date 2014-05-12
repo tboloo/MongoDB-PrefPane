@@ -10,7 +10,6 @@
 #import "MongodController.h"
 
 @interface MongoDB_prefsPane : NSPreferencePane {
-    MongodController *mongodController;
 }
 
 - (void)mainViewDidLoad;

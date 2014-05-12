@@ -14,11 +14,12 @@
 - (id)transformedValue:(id)value {
 	
 	BOOL isWorking = [value boolValue];
-    
+    NSString *startedPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"instance_started" ofType:@"tiff"];
+    NSString *stoppedPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"instance_stopped" ofType:@"tiff"];
 	if(isWorking){
-        return [NSImage imageNamed:@"instance_started.tiff"];
+        return [[NSImage alloc] initWithContentsOfFile:startedPath];
     } else {
-		return [NSImage imageNamed:@"instance_stopped.tiff"];
+		return [[NSImage alloc] initWithContentsOfFile:stoppedPath];
 	}
 	
 	return nil;

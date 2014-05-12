@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155DAE0E1920AF2300CC4FC4 /* ProcessController.h in Headers */ = {isa = PBXBuildFile; fileRef = 155DAE0C1920AF2300CC4FC4 /* ProcessController.h */; };
+		155DAE0F1920AF2300CC4FC4 /* ProcessController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155DAE0D1920AF2300CC4FC4 /* ProcessController.m */; };
 		15A26061191B801700CE93F6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A26060191B801700CE93F6 /* Cocoa.framework */; };
 		15A26063191B801700CE93F6 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A26062191B801700CE93F6 /* PreferencePanes.framework */; };
 		15A2606D191B801700CE93F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A2606B191B801700CE93F6 /* InfoPlist.strings */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		155DAE0C1920AF2300CC4FC4 /* ProcessController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessController.h; sourceTree = "<group>"; };
+		155DAE0D1920AF2300CC4FC4 /* ProcessController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessController.m; sourceTree = "<group>"; };
 		15A2605D191B801700CE93F6 /* MongoDB.prefsPane.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MongoDB.prefsPane.prefPane; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A26060191B801700CE93F6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		15A26062191B801700CE93F6 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
@@ -74,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		155DAE0B1920AEFD00CC4FC4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				155DAE0C1920AF2300CC4FC4 /* ProcessController.h */,
+				155DAE0D1920AF2300CC4FC4 /* ProcessController.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		15A26052191B801700CE93F6 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +127,7 @@
 		15A26068191B801700CE93F6 /* MongoDB.prefsPane */ = {
 			isa = PBXGroup;
 			children = (
+				155DAE0B1920AEFD00CC4FC4 /* Utils */,
 				15A26089191F3DA600CE93F6 /* Mongo */,
 				15A2606F191B801700CE93F6 /* MongoDB_prefsPane.h */,
 				15A26070191B801700CE93F6 /* MongoDB_prefsPane.m */,
@@ -173,6 +187,7 @@
 			files = (
 				15A2609C191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h in Headers */,
 				15A26098191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h in Headers */,
+				155DAE0E1920AF2300CC4FC4 /* ProcessController.h in Headers */,
 				15A2608C191F3DCB00CE93F6 /* IsRunningValueTransformer.h in Headers */,
 				15A26087191EBEE100CE93F6 /* MongodController.h in Headers */,
 				15A26094191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h in Headers */,
@@ -261,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A2609D191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m in Sources */,
+				155DAE0F1920AF2300CC4FC4 /* ProcessController.m in Sources */,
 				15A26091191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m in Sources */,
 				15A26071191B801700CE93F6 /* MongoDB_prefsPane.m in Sources */,
 				15A26095191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m in Sources */,

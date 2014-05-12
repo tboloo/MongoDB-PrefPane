@@ -7,7 +7,7 @@
 //
 
 #import "MongodController.h"
-
+#import "ProcessController.h"
 
 @implementation MongodController
 @synthesize isRunning, useSyslog = _useSyslog, enableHTTPInterface = _enableHTTPInterface, mongodPath = _mongodPath, dbPath = _dbPath, port = _port, mongodTask;
@@ -32,7 +32,7 @@
         }
         
         NSString *d = [[NSUserDefaults standardUserDefaults] valueForKey:@"dbPath"];
-        if (_mongodPath != nil) {
+        if (d != nil) {
             self.dbPath = [NSURL URLWithString:d];
         } else {
             self.dbPath = [[[NSFileManager defaultManager] URLsForDirectory: NSApplicationDirectory inDomains:NSLocalDomainMask] lastObject];
@@ -43,7 +43,7 @@
         if (s != nil) {
             self.useSyslog = s;
         } else {
-            self.useSyslog = [NSNumber numberWithBool:YES];
+            self.useSyslog = [NSNumber numberWithBool:NO];
         }
 
         NSNumber *h = [[NSUserDefaults standardUserDefaults] valueForKey:@"enableHTTPInteface"];
@@ -52,7 +52,9 @@
         } else {
             self.enableHTTPInterface = [NSNumber numberWithBool:YES];
         }
-        //self.mongodTask = [[NSTask alloc] init];
+        pid = [[NSUserDefaults standardUserDefaults] valueForKey:@"pid"];
+        self.isRunning = [ProcessController checkProcessWithPid:pid];
+        NSLog(@"%@ isRunning: %@", pid, self.isRunning);
     }
     return self;
 }
@@ -65,6 +67,7 @@
 -(void)setMongodPath:(NSURL *)mongodPath {
     _mongodPath = mongodPath;
     [[NSUserDefaults standardUserDefaults] setObject:[_mongodPath path] forKey:@"mongodPath"];
+    self.mongodTask.launchPath = [mongodPath path];
 }
 
 -(void)setDbPath:(NSURL *)dbPath {
@@ -132,9 +135,31 @@
 }
 
 - (IBAction)startStopMongod:(id)sender {
-    BOOL _isRunning = [self.isRunning boolValue];
-    _isRunning ^= YES;
-    self.isRunning = [NSNumber numberWithBool:_isRunning];
+    if ([self.isRunning boolValue] == NO) {
+        self.mongodTask = [[NSTask alloc] init];
+        self.mongodTask.launchPath = [self.mongodPath path];
+        NSMutableArray *arguments = [NSMutableArray new];
+        [arguments addObject:@"--dbpath"];
+        [arguments addObject:[self.dbPath path]];
+        [arguments addObject:@"--port"];
+        [arguments addObject:[self.port stringValue]];
+        if ([self.enableHTTPInterface boolValue] == YES) {
+            [arguments addObject:@"--httpinterface"];
+        }
+        if ([self.useSyslog boolValue] == YES) {
+            [arguments addObject:@"--syslog"];
+        }
+        self.mongodTask.arguments = arguments;
+        [self.mongodTask launch];
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:self.mongodTask.processIdentifier] forKey:@"pid"];
+        self.isRunning = [NSNumber numberWithBool:YES];
+//        self.isRunning = [ProcessController checkProcessWithPid:[NSNumber numberWithInt:self.mongodTask.processIdentifier]];
+        NSLog(@"pid: %d, %d", self.mongodTask.processIdentifier, self.mongodTask.isRunning);
+    } else {
+        [ProcessController killProcessWithPid:pid];
+        self.mongodTask = nil;
+        self.isRunning = [ProcessController checkProcessWithPid:pid];
+    }
 }
 
 @end
