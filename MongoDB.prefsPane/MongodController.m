@@ -84,6 +84,11 @@
     [[NSUserDefaults standardUserDefaults] setObject:_enableHTTPInterface forKey:@"enableHTTPInteface"];
 }
 
+-(NSString*)version {
+    NSDictionary* infoDict = [[NSBundle bundleForClass:[self class]] infoDictionary];
+    return [infoDict objectForKey:@"CFBundleVersion"];
+}
+
 - (IBAction)showPathOpenPanel:(id)sender {
     NSOpenPanel *panel = [NSOpenPanel openPanel];
     [panel setAllowsMultipleSelection:NO];

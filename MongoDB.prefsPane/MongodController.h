@@ -19,5 +19,5 @@
 @property (nonatomic, copy) NSURL *dbPath;
 @property (nonatomic, strong) NSTask *mongodTask;
 @property (nonatomic, copy) NSNumber *pid;
-
+@property (nonatomic, readonly) NSString *version;
 @end
