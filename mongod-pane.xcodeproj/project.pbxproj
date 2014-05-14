@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		159607531923531800D30393 /* LaunchctlController.h in Headers */ = {isa = PBXBuildFile; fileRef = 159607511923531800D30393 /* LaunchctlController.h */; };
+		159607541923531800D30393 /* LaunchctlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 159607521923531800D30393 /* LaunchctlController.m */; };
+		15A26061191B801700CE93F6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A26060191B801700CE93F6 /* Cocoa.framework */; };
+		15A26063191B801700CE93F6 /* PreferencePanes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A26062191B801700CE93F6 /* PreferencePanes.framework */; };
+		15A2606D191B801700CE93F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15A2606B191B801700CE93F6 /* InfoPlist.strings */; };
+		15A26071191B801700CE93F6 /* MongoDB_prefsPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A26070191B801700CE93F6 /* MongoDB_prefsPane.m */; };
+		15A26073191B801700CE93F6 /* MongoDB_prefsPane.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A26072191B801700CE93F6 /* MongoDB_prefsPane.tiff */; };
+		15A26076191B801700CE93F6 /* MongoDB_prefsPane.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A26074191B801700CE93F6 /* MongoDB_prefsPane.xib */; };
+		15A26081191B84E500CE93F6 /* instance_started.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A2607D191B84E500CE93F6 /* instance_started.tiff */; };
+		15A26082191B84E500CE93F6 /* instance_stopped.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A2607E191B84E500CE93F6 /* instance_stopped.tiff */; };
+		15A26083191B84E500CE93F6 /* logo-mongodb.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 15A2607F191B84E500CE93F6 /* logo-mongodb.tiff */; };
+		15A26087191EBEE100CE93F6 /* MongodController.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A26085191EBEE100CE93F6 /* MongodController.h */; };
+		15A26088191EBEE100CE93F6 /* MongodController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A26086191EBEE100CE93F6 /* MongodController.m */; };
+		15A2608C191F3DCB00CE93F6 /* IsRunningValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2608A191F3DCB00CE93F6 /* IsRunningValueTransformer.h */; };
+		15A2608D191F3DCB00CE93F6 /* IsRunningValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */; };
+		15A26090191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */; };
+		15A26091191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */; };
+		15A26094191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A26092191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h */; };
+		15A26095191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A26093191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m */; };
+		15A26098191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A26096191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h */; };
+		15A26099191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A26097191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m */; };
+		15A2609C191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A2609A191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h */; };
+		15A2609D191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A2609B191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		159607511923531800D30393 /* LaunchctlController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchctlController.h; sourceTree = "<group>"; };
+		159607521923531800D30393 /* LaunchctlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchctlController.m; sourceTree = "<group>"; };
+		15A2605D191B801700CE93F6 /* mongod-pane.prefPane */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mongod-pane.prefPane"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15A26060191B801700CE93F6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		15A26062191B801700CE93F6 /* PreferencePanes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PreferencePanes.framework; path = System/Library/Frameworks/PreferencePanes.framework; sourceTree = SDKROOT; };
+		15A26065191B801700CE93F6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		15A26066191B801700CE93F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		15A26067191B801700CE93F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		15A2606A191B801700CE93F6 /* mongod-pane-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mongod-pane-Info.plist"; sourceTree = "<group>"; };
+		15A2606C191B801700CE93F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		15A2606E191B801700CE93F6 /* mongod-pane-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mongod-pane-Prefix.pch"; sourceTree = "<group>"; };
+		15A2606F191B801700CE93F6 /* MongoDB_prefsPane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MongoDB_prefsPane.h; sourceTree = "<group>"; };
+		15A26070191B801700CE93F6 /* MongoDB_prefsPane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MongoDB_prefsPane.m; sourceTree = "<group>"; };
+		15A26072191B801700CE93F6 /* MongoDB_prefsPane.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = MongoDB_prefsPane.tiff; sourceTree = "<group>"; };
+		15A26075191B801700CE93F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MongoDB_prefsPane.xib; sourceTree = "<group>"; };
+		15A2607D191B84E500CE93F6 /* instance_started.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = instance_started.tiff; sourceTree = "<group>"; };
+		15A2607E191B84E500CE93F6 /* instance_stopped.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = instance_stopped.tiff; sourceTree = "<group>"; };
+		15A2607F191B84E500CE93F6 /* logo-mongodb.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "logo-mongodb.tiff"; sourceTree = "<group>"; };
+		15A26085191EBEE100CE93F6 /* MongodController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MongodController.h; sourceTree = "<group>"; };
+		15A26086191EBEE100CE93F6 /* MongodController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MongodController.m; sourceTree = "<group>"; };
+		15A2608A191F3DCB00CE93F6 /* IsRunningValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningValueTransformer.h; sourceTree = "<group>"; };
+		15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningValueTransformer.m; sourceTree = "<group>"; };
+		15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToImageValueTransformer.h; sourceTree = "<group>"; };
+		15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToImageValueTransformer.m; sourceTree = "<group>"; };
+		15A26092191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToFontColorValueTransformer.h; sourceTree = "<group>"; };
+		15A26093191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToFontColorValueTransformer.m; sourceTree = "<group>"; };
+		15A26096191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToStringValueTransformer.h; sourceTree = "<group>"; };
+		15A26097191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToStringValueTransformer.m; sourceTree = "<group>"; };
+		15A2609A191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsRunningToButtonCaptionValueTransformer.h; sourceTree = "<group>"; };
+		15A2609B191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsRunningToButtonCaptionValueTransformer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15A26058191B801700CE93F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A26061191B801700CE93F6 /* Cocoa.framework in Frameworks */,
+				15A26063191B801700CE93F6 /* PreferencePanes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15960750192352FC00D30393 /* launchctl */ = {
+			isa = PBXGroup;
+			children = (
+				159607511923531800D30393 /* LaunchctlController.h */,
+				159607521923531800D30393 /* LaunchctlController.m */,
+			);
+			name = launchctl;
+			sourceTree = "<group>";
+		};
+		15A26052191B801700CE93F6 = {
+			isa = PBXGroup;
+			children = (
+				15A26068191B801700CE93F6 /* MongoDB.prefsPane */,
+				15A2605F191B801700CE93F6 /* Frameworks */,
+				15A2605E191B801700CE93F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		15A2605E191B801700CE93F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15A2605D191B801700CE93F6 /* mongod-pane.prefPane */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15A2605F191B801700CE93F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15A26060191B801700CE93F6 /* Cocoa.framework */,
+				15A26062191B801700CE93F6 /* PreferencePanes.framework */,
+				15A26064191B801700CE93F6 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15A26064191B801700CE93F6 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15A26065191B801700CE93F6 /* AppKit.framework */,
+				15A26066191B801700CE93F6 /* CoreData.framework */,
+				15A26067191B801700CE93F6 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		15A26068191B801700CE93F6 /* MongoDB.prefsPane */ = {
+			isa = PBXGroup;
+			children = (
+				15960750192352FC00D30393 /* launchctl */,
+				15A26089191F3DA600CE93F6 /* Mongo */,
+				15A2606F191B801700CE93F6 /* MongoDB_prefsPane.h */,
+				15A26070191B801700CE93F6 /* MongoDB_prefsPane.m */,
+				15A26072191B801700CE93F6 /* MongoDB_prefsPane.tiff */,
+				15A26074191B801700CE93F6 /* MongoDB_prefsPane.xib */,
+				15A26069191B801700CE93F6 /* Supporting Files */,
+			);
+			path = MongoDB.prefsPane;
+			sourceTree = "<group>";
+		};
+		15A26069191B801700CE93F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				15A2607C191B84E500CE93F6 /* resources */,
+				15A2606A191B801700CE93F6 /* mongod-pane-Info.plist */,
+				15A2606B191B801700CE93F6 /* InfoPlist.strings */,
+				15A2606E191B801700CE93F6 /* mongod-pane-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		15A2607C191B84E500CE93F6 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				15A2607D191B84E500CE93F6 /* instance_started.tiff */,
+				15A2607E191B84E500CE93F6 /* instance_stopped.tiff */,
+				15A2607F191B84E500CE93F6 /* logo-mongodb.tiff */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		15A26089191F3DA600CE93F6 /* Mongo */ = {
+			isa = PBXGroup;
+			children = (
+				15A26085191EBEE100CE93F6 /* MongodController.h */,
+				15A26086191EBEE100CE93F6 /* MongodController.m */,
+				15A2608A191F3DCB00CE93F6 /* IsRunningValueTransformer.h */,
+				15A2608B191F3DCB00CE93F6 /* IsRunningValueTransformer.m */,
+				15A2608E191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h */,
+				15A2608F191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m */,
+				15A26092191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h */,
+				15A26093191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m */,
+				15A26096191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h */,
+				15A26097191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m */,
+				15A2609A191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h */,
+				15A2609B191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m */,
+			);
+			name = Mongo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		15A26059191B801700CE93F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A2609C191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.h in Headers */,
+				15A26098191F4CB600CE93F6 /* IsRunningToStringValueTransformer.h in Headers */,
+				15A2608C191F3DCB00CE93F6 /* IsRunningValueTransformer.h in Headers */,
+				159607531923531800D30393 /* LaunchctlController.h in Headers */,
+				15A26087191EBEE100CE93F6 /* MongodController.h in Headers */,
+				15A26094191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.h in Headers */,
+				15A26090191F4A7800CE93F6 /* IsRunningToImageValueTransformer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		15A2605C191B801700CE93F6 /* mongod-pane */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15A26079191B801700CE93F6 /* Build configuration list for PBXNativeTarget "mongod-pane" */;
+			buildPhases = (
+				15A26057191B801700CE93F6 /* Sources */,
+				15A26058191B801700CE93F6 /* Frameworks */,
+				15A26059191B801700CE93F6 /* Headers */,
+				15A2605A191B801700CE93F6 /* Resources */,
+				15A2605B191B801700CE93F6 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mongod-pane";
+			productName = MongoDB.prefsPane;
+			productReference = 15A2605D191B801700CE93F6 /* mongod-pane.prefPane */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15A26053191B801700CE93F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Bolesław Tekielski";
+			};
+			buildConfigurationList = 15A26056191B801700CE93F6 /* Build configuration list for PBXProject "mongod-pane" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 15A26052191B801700CE93F6;
+			productRefGroup = 15A2605E191B801700CE93F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15A2605C191B801700CE93F6 /* mongod-pane */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15A2605A191B801700CE93F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A26073191B801700CE93F6 /* MongoDB_prefsPane.tiff in Resources */,
+				15A2606D191B801700CE93F6 /* InfoPlist.strings in Resources */,
+				15A26082191B84E500CE93F6 /* instance_stopped.tiff in Resources */,
+				15A26076191B801700CE93F6 /* MongoDB_prefsPane.xib in Resources */,
+				15A26083191B84E500CE93F6 /* logo-mongodb.tiff in Resources */,
+				15A26081191B84E500CE93F6 /* instance_started.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		15A2605B191B801700CE93F6 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15A26057191B801700CE93F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15A2609D191F4E3E00CE93F6 /* IsRunningToButtonCaptionValueTransformer.m in Sources */,
+				15A26091191F4A7800CE93F6 /* IsRunningToImageValueTransformer.m in Sources */,
+				159607541923531800D30393 /* LaunchctlController.m in Sources */,
+				15A26071191B801700CE93F6 /* MongoDB_prefsPane.m in Sources */,
+				15A26095191F4C3B00CE93F6 /* IsRunningToFontColorValueTransformer.m in Sources */,
+				15A2608D191F3DCB00CE93F6 /* IsRunningValueTransformer.m in Sources */,
+				15A26088191EBEE100CE93F6 /* MongodController.m in Sources */,
+				15A26099191F4CB600CE93F6 /* IsRunningToStringValueTransformer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		15A2606B191B801700CE93F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15A2606C191B801700CE93F6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		15A26074191B801700CE93F6 /* MongoDB_prefsPane.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				15A26075191B801700CE93F6 /* Base */,
+			);
+			name = MongoDB_prefsPane.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15A26077191B801700CE93F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		15A26078191B801700CE93F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		15A2607A191B801700CE93F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MongoDB.prefsPane/mongod-pane-Prefix.pch";
+				INFOPLIST_FILE = "MongoDB.prefsPane/mongod-pane-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "mongod-pane";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Debug;
+		};
+		15A2607B191B801700CE93F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MongoDB.prefsPane/mongod-pane-Prefix.pch";
+				INFOPLIST_FILE = "MongoDB.prefsPane/mongod-pane-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/PreferencePanes";
+				PRODUCT_NAME = "mongod-pane";
+				WRAPPER_EXTENSION = prefPane;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15A26056191B801700CE93F6 /* Build configuration list for PBXProject "mongod-pane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A26077191B801700CE93F6 /* Debug */,
+				15A26078191B801700CE93F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15A26079191B801700CE93F6 /* Build configuration list for PBXNativeTarget "mongod-pane" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15A2607A191B801700CE93F6 /* Debug */,
+				15A2607B191B801700CE93F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 15A26053191B801700CE93F6 /* Project object */;
+}
