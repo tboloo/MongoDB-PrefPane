@@ -26,7 +26,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="MongoDB" identifier="1" id="gqE-hS-p8A">
-                                <view key="view" ambiguous="YES" id="bz2-YS-oNi">
+                                <view key="view" id="bz2-YS-oNi">
                                     <rect key="frame" x="10" y="33" width="622" height="207"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -299,7 +299,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Update" identifier="3" id="hcR-jJ-eJZ">
-                                <view key="view" id="5dn-eu-dke">
+                                <view key="view" ambiguous="YES" id="5dn-eu-dke">
                                     <rect key="frame" x="10" y="33" width="622" height="207"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -361,7 +361,7 @@
                                             </popUpButtonCell>
                                         </popUpButton>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbs-fc-iKP">
-                                            <rect key="frame" x="183" y="23" width="90" height="17"/>
+                                            <rect key="frame" x="181" y="23" width="90" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1.0" id="jky-EC-qAQ">
                                                 <font key="font" metaFont="system" size="10"/>
@@ -370,6 +370,18 @@
                                             </textFieldCell>
                                             <connections>
                                                 <binding destination="lZN-Dz-Cco" name="value" keyPath="version" id="Ytc-Zq-UQa"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3aX-Ca-Yvv">
+                                            <rect key="frame" x="181" y="7" width="176" height="17"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Wednesday, May 14, 2014, 22:20" id="Mvc-uH-Gcg">
+                                                <font key="font" metaFont="system" size="10"/>
+                                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <binding destination="lZN-Dz-Cco" name="value" keyPath="version" id="hVD-FX-eQ8"/>
                                             </connections>
                                         </textField>
                                     </subviews>
