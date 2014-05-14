@@ -26,7 +26,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="MongoDB" identifier="1" id="gqE-hS-p8A">
-                                <view key="view" id="bz2-YS-oNi">
+                                <view key="view" ambiguous="YES" id="bz2-YS-oNi">
                                     <rect key="frame" x="10" y="33" width="622" height="207"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -50,7 +50,7 @@
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JNp-hJ-vae">
                                             <rect key="frame" x="111" y="187" width="150" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MongoDB Server Status" id="k9q-0m-qvk">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="MongoDB server status" id="k9q-0m-qvk">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -59,7 +59,7 @@
                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nG8-dW-xIU">
                                             <rect key="frame" x="111" y="69" width="162" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="The MongoDB Server is " id="0TG-2r-fvE">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="The MongoDB server is " id="0TG-2r-fvE">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -225,7 +225,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <connections>
-                                                <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="ct0-bT-xif">
+                                                <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="owx-re-vW2">
                                                     <dictionary key="options">
                                                         <string key="NSValueTransformerName">IsRunningValueTransformer</string>
                                                     </dictionary>
@@ -236,7 +236,7 @@
                                         <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTT-8R-aAI">
                                             <rect key="frame" x="221" y="134" width="15" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <stepperCell key="cell" controlSize="small" continuous="YES" alignment="left" increment="10" minValue="1024" maxValue="65535" doubleValue="27001" id="OJp-Eb-odg"/>
+                                            <stepperCell key="cell" controlSize="small" continuous="YES" alignment="left" increment="10" minValue="1025" maxValue="65534" doubleValue="27001" id="OJp-Eb-odg"/>
                                             <connections>
                                                 <binding destination="lZN-Dz-Cco" name="enabled" keyPath="isRunning" id="moN-cE-31E">
                                                     <dictionary key="options">
@@ -299,7 +299,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Update" identifier="3" id="hcR-jJ-eJZ">
-                                <view key="view" ambiguous="YES" id="5dn-eu-dke">
+                                <view key="view" id="5dn-eu-dke">
                                     <rect key="frame" x="10" y="33" width="622" height="207"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -350,7 +350,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" title="Weekly" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" enabled="NO" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="xRg-O0-Ldw" id="DPr-s9-NCI">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                <font key="font" metaFont="system"/>
+                                                <font key="font" metaFont="menu"/>
                                                 <menu key="menu" title="OtherViews" id="wy5-5D-Vth">
                                                     <items>
                                                         <menuItem title="Weekly" state="on" id="xRg-O0-Ldw"/>
