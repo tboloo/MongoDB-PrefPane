@@ -107,5 +107,8 @@ See: http://developer.apple.com/legacy/mac/library/#qa/qa2001/qa1123.html */
     return @([[LaunchctlController getBSDProcessList] objectForKey:pid] != nil);
 }
 
++(void)killProcess:(NSNumber *)pid {
+    kill([pid intValue], SIGTERM);
+}
 
 @end

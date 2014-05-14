@@ -10,4 +10,5 @@
 
 @interface LaunchctlController : NSObject
 +(NSNumber *)isProcessRunning:(NSNumber *)pid;
++(void)killProcess:(NSNumber *)pid;
 @end

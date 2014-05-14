@@ -53,6 +53,7 @@
             self.enableHTTPInterface = @(YES);
         }
         self.pid = [[NSUserDefaults standardUserDefaults] valueForKey:@"pid"];
+        self.isRunning = [LaunchctlController isProcessRunning:self.pid];
     }
     return self;
 }
@@ -153,7 +154,7 @@
         [[NSUserDefaults standardUserDefaults] setObject:self.pid forKey:@"pid"];
         self.isRunning = [LaunchctlController isProcessRunning:self.pid];
     } else {
-        [self.mongodTask terminate];
+        [LaunchctlController killProcess:self.pid];
         self.mongodTask = nil;
         self.isRunning = @(NO);
     }
