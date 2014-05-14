@@ -203,6 +203,7 @@
 			buildConfigurationList = 15A26079191B801700CE93F6 /* Build configuration list for PBXNativeTarget "mongod-pane" */;
 			buildPhases = (
 				15A26057191B801700CE93F6 /* Sources */,
+				152898811923F38500DA816E /* ShellScript */,
 				15A26058191B801700CE93F6 /* Frameworks */,
 				15A26059191B801700CE93F6 /* Headers */,
 				15A2605A191B801700CE93F6 /* Resources */,
@@ -269,6 +270,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXRezBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		152898811923F38500DA816E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rev=$(git --git-dir=${PROJECT_DIR}/.git rev-parse --short HEAD)\nv=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n/usr/libexec/PlistBuddy -c \"Set CFBundleVersion $v.$rev\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15A26057191B801700CE93F6 /* Sources */ = {
