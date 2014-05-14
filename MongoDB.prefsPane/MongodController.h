@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <PreferencePanes/PreferencePanes.h>
 
-@interface MongodController : NSObject {
-    NSNumber *pid;
-}
+@interface MongodController : NSObject
 
 @property (nonatomic, copy) NSNumber *isRunning;
 @property (nonatomic, copy) NSNumber *useSyslog;
@@ -20,6 +18,6 @@
 @property (nonatomic, copy) NSURL *mongodPath;
 @property (nonatomic, copy) NSURL *dbPath;
 @property (nonatomic, strong) NSTask *mongodTask;
-@property (weak) IBOutlet NSPreferencePane *prefPane;
+@property (nonatomic, copy) NSNumber *pid;
 
 @end

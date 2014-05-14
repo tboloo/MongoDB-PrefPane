@@ -7,9 +7,10 @@
 //
 
 #import "MongodController.h"
+#import "LaunchctlController.h"
 
 @implementation MongodController
-@synthesize isRunning, useSyslog = _useSyslog, enableHTTPInterface = _enableHTTPInterface, mongodPath = _mongodPath, dbPath = _dbPath, port = _port, mongodTask;
+@synthesize isRunning, useSyslog = _useSyslog, enableHTTPInterface = _enableHTTPInterface, mongodPath = _mongodPath, dbPath = _dbPath, port = _port, mongodTask, pid;
 
 -(id)init {
     self = [super init];
@@ -51,7 +52,7 @@
         } else {
             self.enableHTTPInterface = @(YES);
         }
-        pid = [[NSUserDefaults standardUserDefaults] valueForKey:@"pid"];
+        self.pid = [[NSUserDefaults standardUserDefaults] valueForKey:@"pid"];
     }
     return self;
 }
@@ -148,8 +149,9 @@
         }
         self.mongodTask.arguments = arguments;
         [self.mongodTask launch];
-        [[NSUserDefaults standardUserDefaults] setObject:@(self.mongodTask.processIdentifier) forKey:@"pid"];
-        self.isRunning = @(self.mongodTask.isRunning);
+        self.pid = @(self.mongodTask.processIdentifier);
+        [[NSUserDefaults standardUserDefaults] setObject:self.pid forKey:@"pid"];
+        self.isRunning = [LaunchctlController isProcessRunning:self.pid];
     } else {
         [self.mongodTask terminate];
         self.mongodTask = nil;
