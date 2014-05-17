@@ -1,7 +1,7 @@
 MongoDB-PrefPane
 ================
 
-MongoDB prefPane for MacOSX
+MongoDB prefPane for MacOSX. Heavily influenced by [Remy Saissy's mongodb-macosx-prefspane](https://github.com/remysaissy/mongodb-macosx-prefspane)
 
 Functionalities
 ===============
