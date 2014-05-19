@@ -6,13 +6,13 @@ MongoDB prefPane for MacOSX. Heavily influenced by [Remy Saissy's mongodb-macosx
 Functionalities
 ===============
 
-Runs MongoDB on OSX Mountain Lion
-Provides mongod status
+Runs MongoDB on OSX Mountain Lion.
+Provides mongod status.
 
 Prerequisites
 =============
 
-Does not include mongodb binaries, therefore you first need to install it from http://www.mongodb.org/downloads
+Does not include mongodb binaries, therefore you first need to install them from http://www.mongodb.org/downloads
 
 Installation
 ============
