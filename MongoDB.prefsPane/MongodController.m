@@ -10,7 +10,7 @@
 #import "LaunchctlController.h"
 
 @implementation MongodController
-@synthesize isRunning, useSyslog = _useSyslog, enableHTTPInterface = _enableHTTPInterface, mongodPath = _mongodPath, dbPath = _dbPath, port = _port, mongodTask, pid;
+@synthesize isRunning, useSyslog = _useSyslog, enableHTTPInterface = _enableHTTPInterface, mongodPath = _mongodPath, dbPath = _dbPath, port = _port, mongodTask, pid, lastChecked;
 
 -(id)init {
     self = [super init];
@@ -54,6 +54,13 @@
         }
         self.pid = [[NSUserDefaults standardUserDefaults] valueForKey:@"pid"];
         self.isRunning = [LaunchctlController isProcessRunning:self.pid];
+        
+        NSString *formatString = [NSDateFormatter dateFormatFromTemplate:@"dd/MM/yyyy" options:0                                                               locale:[NSLocale currentLocale]];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:formatString];
+        NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:421882210];
+        self.lastChecked = [dateFormatter stringFromDate:date];
     }
     return self;
 }

@@ -20,4 +20,5 @@
 @property (nonatomic, strong) NSTask *mongodTask;
 @property (nonatomic, copy) NSNumber *pid;
 @property (nonatomic, readonly) NSString *version;
+@property (nonatomic, copy) NSString *lastChecked;
 @end
