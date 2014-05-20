@@ -283,7 +283,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rev=$(git --git-dir=${PROJECT_DIR}/.git rev-parse --short HEAD)\nv=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n/usr/libexec/PlistBuddy -c \"Set CFBundleVersion $v.$rev\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+			shellScript = "rev=$(git --git-dir=${PROJECT_DIR}/.git rev-parse --short HEAD)\nv=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\n/usr/libexec/PlistBuddy -c \"Set CFBundleVersion $v.${BUILD_NUMBER}\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
