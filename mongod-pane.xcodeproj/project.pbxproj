@@ -285,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "rev=$(git --git-dir=${PROJECT_DIR}/.git rev-parse --short HEAD)\nv=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nb=\"${BUILD_NUMBER}\"\necho \"Build: ${BUILD_NUMBER}, $BUILD_NUMBER !\"\nif [[ -z \"${BUILD_NUMBER}\" ]]; then b=12; fi\n/usr/libexec/PlistBuddy -c \"Set CFBundleVersion $v.$rev.$b\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+			shellScript = "rev=$(git --git-dir=${PROJECT_DIR}/.git rev-parse --short HEAD)\nv=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nb=\"${BUILD_NUMBER}\"\necho \"number: ${BUILD_NUMBER}, $BUILD_NUMBER::\"\nif [[ -z \"${BUILD_NUMBER}\" ]]; then b=12; fi\n/usr/libexec/PlistBuddy -c \"Set CFBundleVersion $v.$rev.$b\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
